@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rudolfo - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navegador">
         <ul class="menu">
             <li>
-                <a href="#inicio">Início</a>
+                <a href="#inicio" class="menu-link">Início</a>
             </li>
             <li>
-                <a href="#projetos">Projetos</a>
+                <a href="#projetos" class="menu-link">Projetos</a>
             </li>
             <li>
-                <a href="#sobre">Sobre</a>
+                <a href="#sobre" class="menu-link">Sobre</a>
             </li>
             <li>
-                <a href="#contatos">Contatos</a>
+                <a href="#contatos" class="menu-link">Contatos</a>
             </li>
         </ul>
     </nav>
@@ -27,14 +30,16 @@
         <div>
             <img src="images/_MG_1272.JPG" alt="">
             <h1>Rudolfo Sehnem</h1>
-            <p>Desenvolvedor Front  End</p>
+            <p>Desenvolvedor Front End</p>
         </div>
     </main>
     <section id="sobre" class="sobre">
 
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
-            <p class="sobre-paragrafo">Desenvolvedor apaixonado por transformar ideias em código. Acredito que uma boa experiência web vai além da estética - precisa ser funcional, intuitiva e agradável. Gosto de código limpo, tecnologia moderna e estou sempre explorando como a IA pode elevar meus projetos.</p>
+            <p class="sobre-paragrafo">Desenvolvedor apaixonado por transformar ideias em código. Acredito que uma boa
+                experiência web vai além da estética - precisa ser funcional, intuitiva e agradável. Gosto de código
+                limpo, tecnologia moderna e estou sempre explorando como a IA pode elevar meus projetos.</p>
         </div>
 
     </section>
@@ -53,7 +58,7 @@
                 <h3 class="info-projetos">Site de viagens</h3>
                 <p class="paragrafo-projetos">fodase</p>
             </div>
-<!-- Teste de commit -->
+
             <div class="projetos-feitos">
                 <img src="" alt="" class="projetos-imagem">
                 <h3 class="info-projetos">Microsoft</h3>
@@ -64,7 +69,15 @@
 
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Contatos</h2>
-        <div class="contatos-caixa"></div>
+        <form class="formulario-contato" id="formulario">
+            <div class="nome-form">
+                <input placeholder="Nome" type="text" name="" class="campo-form">
+            </div>
+            <div class="grupo-form">
+                <textarea placeholder="Digite sua mensagem" name="" class="text-form"></textarea>
+            </div>
+        </form>
     </section>
 </body>
+
 </html>
