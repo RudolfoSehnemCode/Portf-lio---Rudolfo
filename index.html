@@ -9,6 +9,9 @@
 </head>
 
 <body>
+
+    <div class="particulas"></div>
+
     <nav class="navegador">
         <ul class="menu">
             <li>
@@ -27,11 +30,11 @@
     </nav>
 
     <main id="inicio" class="cabecalho">
-        
-            <img src="images/_MG_1272.JPG" alt="" class="foto-perfil">
-            <h1>Rudolfo Sehnem</h1>
-            <p class="dev">Desenvolvedor Front End</p>
-    
+
+        <img src="images/_MG_1272.JPG" alt="" class="foto-perfil">
+        <h1>Rudolfo Sehnem</h1>
+        <p class="dev">Desenvolvedor de Sistemas</p>
+
     </main>
     <section id="sobre" class="sobre">
 
@@ -49,33 +52,42 @@
         <div class="projetos-caixa">
             <div class="projetos-card">
                 <img src="images/projeto1.png" alt="" class="projetos-imagem">
-                <h3 class="info-projetos">Loja de carros</h3>
-                <p class="paragrafo-projetos">Loja virtual moderna</p>
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Loja de carros</h3>
+                    <p class="paragrafo-projetos">Loja virtual moderna</p>
+                </div>
             </div>
 
             <div class="projetos-card">
                 <img src="images/projeto2.png" alt="" class="projetos-imagem">
-                <h3 class="info-projetos">Site de viagens</h3>
-                <p class="paragrafo-projetos">.</p>
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Site de viagens</h3>
+                    <p class="paragrafo-projetos">.</p>
+                </div>
             </div>
 
             <div class="projetos-card">
                 <img src="images/projeto3.png" alt="" class="projetos-imagem">
-                <h3 class="info-projetos">Microsoft</h3>
-                <p class="paragrafo-projetos">.</p>
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Microsoft</h3>
+                    <p class="paragrafo-projetos">.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
+        <h2 class="contatos-titulo">Entre em contato</h2>
         <form class="formulario-contato" id="formulario">
-            <div class="nome-form">
+            <div class="grupo-form">
                 <input placeholder="Nome" type="text" name="" class="campo-form">
             </div>
             <div class="grupo-form">
-                <textarea placeholder="Digite sua mensagem" name="" class="text-form"></textarea>
+                <textarea placeholder="Digite sua mensagem" name="" class="campo-form"></textarea>
             </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
         </form>
     </section>
 </body>
