@@ -80,40 +80,57 @@
         <h2 class="contatos-titulo">Entre em contato</h2>
         <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
             <div class="grupo-form">
-                <input placeholder="Nome" type="text" name="" class="campo-form" id="nome">
+                <input placeholder="Nome" type="text" class="campo-form" id="nome" required>
             </div>
             <div class="grupo-form">
-                <textarea placeholder="Digite sua mensagem" name="" class="campo-form" id="mensagem"
-                    rows="4"></textarea>
+                <textarea placeholder="Digite sua mensagem" class="campo-form" id="mensagem" rows="4" required></textarea>
             </div>
 
-            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+            <button type="submit" class="botao-form" id="botao-enviar">Enviar WhatsApp</button>
+            <p id="aviso"></p>
 
         </form>
     </section>
 
     <script>
 
+        let ultimo_envio = 0;
+
         function enviarWhats(event) {
             event.preventDefault()
-
 
             const nome = document.getElementById('nome').value;
             const mensagem = document.getElementById('mensagem').value;
             const telefone = '5547997477499'
+
+            
+            if (nome.trim() === '' || mensagem.trim() === '') {
+                alert('Preencha todos os campos!');
+                return;
+            }
+
+            
+            const agora = Date.now();
+            if (agora - ultimo_envio < 30000) {
+                document.getElementById('aviso').textContent = 'Aguarde 30 segundos antes de enviar novamente';
+                return;
+            }
+
+            ultimo_envio = agora;
 
             const texto = `Olá me chamo ${nome}, ${mensagem}`
             const msgFormatada = encodeURIComponent(texto)
 
             const url = `https://wa.me/${telefone}?text=${msgFormatada}`
 
-            window.open(url, '_blank')
+            document.getElementById('formulario').reset();
+            document.getElementById('aviso').textContent = '';
 
+            window.open(url, '_blank')
         }
 
-
-
     </script>
+
 </body>
 
 </html>
