@@ -50,13 +50,16 @@
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">Meus Projetos</h2>
         <div class="projetos-caixa">
-            <div class="projetos-card">
-                <img src="images/projeto1.png" alt="" class="projetos-imagem">
-                <div class="caixa-texto-projeto">
-                    <h3 class="info-projetos">Loja de carros</h3>
-                    <p class="paragrafo-projetos">Loja virtual moderna</p>
+            <a href="landing-page/index.html">
+                <div class="projetos-card">
+                    <img src="images/srceenshot.png" alt="Landing page" class="projetos-imagem">
+                    <div class="caixa-texto-projeto">
+                        <h3 class="info-projetos">Landing page</h3>
+                        <p class="paragrafo-projetos">Landing page responsiva com HTML5, CSS3 e JavaScript.
+                            Navegação dinâmica, validação de formulários e arquitetura modular.</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
             <div class="projetos-card">
                 <img src="images/projeto2.png" alt="" class="projetos-imagem">
@@ -83,7 +86,8 @@
                 <input placeholder="Nome" type="text" class="campo-form" id="nome" required>
             </div>
             <div class="grupo-form">
-                <textarea placeholder="Digite sua mensagem" class="campo-form" id="mensagem" rows="4" required></textarea>
+                <textarea placeholder="Digite sua mensagem" class="campo-form" id="mensagem" rows="4"
+                    required></textarea>
             </div>
 
             <button type="submit" class="botao-form" id="botao-enviar">Enviar WhatsApp</button>
@@ -103,13 +107,13 @@
             const mensagem = document.getElementById('mensagem').value;
             const telefone = '5547997477499'
 
-            
+
             if (nome.trim() === '' || mensagem.trim() === '') {
                 alert('Preencha todos os campos!');
                 return;
             }
 
-            
+
             const agora = Date.now();
             if (agora - ultimo_envio < 30000) {
                 document.getElementById('aviso').textContent = 'Aguarde 30 segundos antes de enviar novamente';
