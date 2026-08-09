@@ -257,3 +257,91 @@ h1{
         transform: translateY(-20px);
     }
 }
+.rodape {
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+}
+
+.rodape-caixa {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rodape-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0.9rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.rodape-link:hover {
+    transform: translateY(-4px);
+    border-color: var(--primaria);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    background: linear-gradient(45deg, rgba(79, 70, 229, 0.15), rgba(124, 58, 237, 0.15));
+}
+
+.rodape::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    margin: 0 auto 2rem;
+}
+
+.rodape-texto {
+    font-size: 0.85rem;
+    color: rgba(226, 232, 240, 0.6);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .foto-perfil {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .dev {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .sobre-titulo,
+    .projetos-titulo,
+    .contatos-titulo {
+        font-size: 2rem;
+    }
+
+    .projetos-caixa {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-caixa {
+        flex-direction: column;
+        max-width: 250px;
+    }
+}

@@ -16,20 +16,23 @@ O portfólio possui:
 * Formulário de contato integrado ao WhatsApp.
 * Navegação suave entre seções.
 * Design responsivo para desktop e dispositivos móveis.
+* Links diretos para GitHub e LinkedIn no rodapé.
 
 ## Tecnologias Utilizadas
 
 * HTML5
 * CSS3
 * JavaScript
-* API WhatsApp (wa.me)
+* Link direto WhatsApp (wa.me)
+* Git / GitHub
+* Netlify (hospedagem)
 
 ## Conceitos Aplicados
 
 * HTML semântico
 * CSS Grid Layout
 * Variáveis CSS
-* Responsividade
+* Responsividade (mobile-first via media queries)
 * Glassmorphism
 * Animações CSS
 * Manipulação do DOM
@@ -54,6 +57,10 @@ Cards responsivos para apresentação dos trabalhos desenvolvidos.
 
 Formulário que gera automaticamente uma mensagem personalizada e abre uma conversa no WhatsApp.
 
+### Rodapé com Redes Profissionais
+
+Links diretos para GitHub e LinkedIn, estilizados no mesmo padrão visual do restante do site.
+
 ## Estrutura do Projeto
 
 ```text
@@ -61,11 +68,13 @@ portfolio/
 │
 ├── index.html
 ├── style.css
+├── script.js
+├── favicon.svg
 ├── images/
-│   ├── projeto1.png
-│   ├── projeto2.png
-│   ├── projeto3.png
-│   └── foto-perfil.jpg
+│   ├── nos-trilhos.png
+│   ├── dashboard-preview.png
+│   ├── srceenshot.png
+│   └── _MG_1272.JPG
 └── README.md
 ```
 
@@ -78,12 +87,12 @@ Durante o desenvolvimento deste projeto foram praticados conceitos importantes d
 * Criação de interfaces modernas.
 * Responsividade para múltiplos dispositivos.
 * Manipulação de eventos utilizando JavaScript.
-* Integração com APIs externas.
+* Integração com serviços externos.
+* Debugging de estrutura HTML (aninhamento correto de tags).
 
 ## Melhorias Futuras
 
 * Modo claro e escuro.
-* Integração com GitHub e LinkedIn.
 * Página individual para cada projeto.
 * Formulário conectado a backend.
 * Sistema de animações mais avançado.

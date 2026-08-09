@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rudolfo - Portfólio</title>
+    <meta name="description"
+        content="Portfólio de Rudolfo Sehnem, desenvolvedor de sistemas em PHP, Python, JavaScript e MySQL, com foco em DevSecOps.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="script.js" defer></script>
 </head>
+
 
 <body>
 
@@ -32,7 +36,7 @@
 
     <main id="inicio" class="cabecalho">
 
-        <img src="images/_MG_1272.JPG" alt="" class="foto-perfil">
+        <img src="images/_MG_1272.JPG" alt="Foto de perfil Rudolfo" class="foto-perfil">
         <h1>Rudolfo Sehnem</h1>
         <p class="dev">Desenvolvedor de Sistemas</p>
 
@@ -41,9 +45,12 @@
 
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
-            <p class="sobre-paragrafo">Desenvolvedor apaixonado por transformar ideias em código. Acredito que uma boa
-                experiência web vai além da estética - precisa ser funcional, intuitiva e agradável. Gosto de código
-                limpo, tecnologia moderna e estou sempre explorando como a IA pode elevar meus projetos.</p>
+            <p class="sobre-paragrafo">Estudante de TADS na UDESC e técnico formado em
+                Desenvolvimento de Sistemas pelo SESI. Tenho experiência prática em PHP, Python, MySQL e JavaScript, e
+                venho me
+                aprofundando em segurança da informação com o objetivo de seguir carreira em DevSecOps - unindo
+                desenvolvimento
+                sólido com práticas de segurança desde o início do ciclo de desenvolvimento.</p>
         </div>
 
     </section>
@@ -75,18 +82,18 @@
                 </div>
             </a>
 
-            <a href="https://github.com/RudolfoSehnemCode/nos-trilhos-php" target="_blank"
-                rel="noopener noreferrer">
-            <div class="projetos-card">
-                <img src="images/Captura de tela de 2026-08-08 21-17-10.png" alt="Aplicativo de controle de gestão"
-                    class="projetos-imagem">
-                <div class="caixa-texto-projeto">
-                    <h3 class="info-projetos">Sistema de gestão ferroviária</h3>
-                    <p class="paragrafo-projetos">Sistema de gestão ferroviária em PHP e MySQL, com autenticação via bcrypt e integração IoT (Arduino/ESP32).</p>
+            <a href="https://github.com/RudolfoSehnemCode/nos-trilhos-php" target="_blank" rel="noopener noreferrer">
+                <div class="projetos-card">
+                    <img src="images/nos-trilhos.png" alt="Aplicativo de controle em php" class="projetos-imagem">
+                    <div class="caixa-texto-projeto">
+                        <h3 class="info-projetos">Sistema de gestão ferroviária</h3>
+                        <p class="paragrafo-projetos">Sistema de gestão ferroviária em PHP e MySQL, com autenticação via
+                            bcrypt e integração IoT (Arduino/ESP32).</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-        </a>
+
     </section>
 
     <section id="contatos" class="contatos">
@@ -105,46 +112,15 @@
 
         </form>
     </section>
-
-    <script>
-
-        let ultimo_envio = 0;
-
-        function enviarWhats(event) {
-            event.preventDefault()
-
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5547997477499'
-
-
-            if (nome.trim() === '' || mensagem.trim() === '') {
-                alert('Preencha todos os campos!');
-                return;
-            }
-
-
-            const agora = Date.now();
-            if (agora - ultimo_envio < 30000) {
-                document.getElementById('aviso').textContent = 'Aguarde 30 segundos antes de enviar novamente';
-                return;
-            }
-
-            ultimo_envio = agora;
-
-            const texto = `Olá me chamo ${nome}, ${mensagem}`
-            const msgFormatada = encodeURIComponent(texto)
-
-            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
-
-            document.getElementById('formulario').reset();
-            document.getElementById('aviso').textContent = '';
-
-            window.open(url, '_blank')
-        }
-
-    </script>
-
+        <footer class="rodape">
+            <div class="rodape-caixa">
+                <a href="https://github.com/RudolfoSehnemCode" target="_blank" rel="noopener noreferrer"
+                    class="rodape-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/rudolfo-sehnem-27ab663a8" target="_blank" rel="noopener noreferrer"
+                    class="rodape-link">LinkedIn</a>
+            </div>
+            <p class="rodape-texto">© 2026 Rudolfo Sehnem</p>
+        </footer>
 </body>
 
 </html>
