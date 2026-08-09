@@ -91,7 +91,6 @@ Durante o desenvolvimento deste projeto foram praticados conceitos importantes d
 ## Autor
 
 Rudolfo Sehnem
-Desenvolvedor de Sistemas | Especialista em Infraestrutura de TI
 
 LinkedIn: https://www.linkedin.com/in/rudolfo-sehnem-27ab663a8
 
